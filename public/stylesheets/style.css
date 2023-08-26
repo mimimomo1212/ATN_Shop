@@ -10,6 +10,7 @@
 }
 
 :root {
+  --blue: #1790E8;
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
@@ -197,12 +198,12 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .detail-container {
   background-color: var(--second-bg-color);
-  padding: 2rem 3rem;
+  padding: 2rem 4rem 5rem;
   display: flex;
 }
 
@@ -220,4 +221,13 @@ span {
 .detail p {
   font-size: 1.7rem;
   color: #fff;
+}
+
+.heading-detail{
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 4.5rem;
+  box-shadow: 0 0 1rem var(--blue);
+  padding: 1rem 1rem;
+  color: var(--main-color);
 }
