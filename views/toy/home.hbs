@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="" class="logo">ATN</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#lego">Lego</a>
+            <a href="#model">Model</a>
+            <a href="#car">Car</a>
+            <a href="/list">Storage</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Welcome to</h3>
+            <h1>ATN</h1>
+            <h3>We have <span>Lego and Model</span></h3>
+            <div class="social-media">
+                <a href="https://www.facebook.com/mimimomo.1212/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/mimimomo.1212/?hl=vi"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/channel/UCdSbijUCnbKD14bsWDxCA5A"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.tiktok.com/"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="../images/main_2.png" alt="">
+        </div>
+
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="../images/main_1.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>ATN</span></h2>
+            <h3>Marvel shop</h3>
+            <p>ATN is a Vietnamese company which is selling toys to teenagers
+                in many provinces all over Vietnam. The company has the revenue over
+                700.000 dollars/year. </p>
+        </div>
+    </section>
+
+    <section class="product" id="lego">
+        <h2 class="heading" style="background-color: #323946;"><span>Lego</span></h2>
+        {{#each legoToys }}
+        <a href="/detail/{{_id}}">
+            <div class="product-container">
+                <div class="product-box">
+                    <img src="{{ image }}" width="200px" height="288px">
+                    <p>{{ name }}</p>
+                    <p>{{ price }} $</p>
+                    <br>
+                    <a href="#" class="btn">Buy</a>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </section>
+
+    <section class="product" id="model">
+        <h2 class="heading" style="background-color: #323946;"><span>Model</span></h2>
+        {{#each modelToys }}
+        <a href="/detail/{{_id}}">
+            <div class="product-container">
+                <div class="product-box">
+                    <img src="{{ image }}" width="200px" height="288px">
+                    <p>{{ name }}</p>
+                    <p>{{ price }} $</p>
+                    <br>
+                    <a href="#" class="btn">Buy</a>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </section>
+
+    <section class="product" id="car">
+        <h2 class="heading" style="background-color: #323946;"><span>Car</span></h2>
+        {{#each carToys }}
+        <a href="/detail/{{_id}}">
+            <div class="product-container">
+                <div class="product-box">
+                    <img src="{{ image }}" width="200px" height="288px">
+                    <p>{{ name }}</p>
+                    <p>{{ price }} $</p>
+                    <br>
+                    <a href="#" class="btn">Buy</a>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </section>
+</body>
+
+</html>

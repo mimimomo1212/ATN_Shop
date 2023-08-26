@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel='stylesheet' href='/stylesheets/storage.css' />
+   <title>Toys List</title>
+</head>
+
+<body>
+   <table>
+      <tr>
+         <th>
+            <a class="btn-home" href="/home">Home</a>
+         </th>
+         <th colspan="4">
+            <h1 style="text-align: center;">Toys List</h1>
+         </th>
+         <th>
+            <a class="btn-add" href="/add">Add</a>
+         </th>
+      </tr>
+      <tr>
+         <th>Name</th>
+         <th>Details</th>
+         <th>Image</th>
+         <th>Price</th>
+         <th>Action</th>
+      </tr>
+      {{#each legoToys }}
+      <tr>
+         <td>{{ name }}</td>
+         <td>{{type}}</td>
+         <td>{{ detail }}</td>
+         <td>
+            <img src="{{ image }}" width="100" height="144">
+         </td>
+         <td>{{ price }}$</td>
+         <td>
+            <a class="btn-edit" href="/lego/update/Lego/{{ _id }}">Edit</a>
+            <a class="btn-delete" href="/lego/delete/Lego/{{ _id }}"
+               onclick="return confirm('Are you sure to delete this Lego toy?');">Delete</a>
+         </td>
+      </tr>
+      {{/each}}
+
+      {{#each modelToys }}
+      <tr>
+         <td>{{ name }}</td>
+         <td>{{type}}</td>
+         <td>{{ detail }}</td>
+         <td>
+            <img src="{{ image }}" width="100" height="144">
+         </td>
+         <td>{{ price }}$</td>
+         <td>
+            <a class="btn-edit" href="/model/update/Model/{{ _id }}">Edit</a>
+            <a class="btn-delete" href="/model/delete/Model/{{ _id }}"
+               onclick="return confirm('Are you sure to delete this Model toy?');">Delete</a>
+         </td>
+      </tr>
+      {{/each}}
+
+      {{#each carToys }}
+      <tr>
+         <td>{{ name }}</td>
+         <td>{{type}}</td>
+         <td>{{ detail }}</td>
+         <td>
+            <img src="{{ image }}" width="100" height="144">
+         </td>
+         <td>{{ price }}$</td>
+         <td>
+            <a class="btn-edit" href="/car/update/Car/{{ _id }}">Edit</a>
+            <a class="btn-delete" href="/car/delete/Car/{{ _id }}"
+               onclick="return confirm('Are you sure to delete this Car toy?');">Delete</a>
+         </td>
+      </tr>
+      {{/each}}
+</body>
+
+</html>

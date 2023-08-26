@@ -1,0 +1,92 @@
+* {
+    text-decoration: none;
+    text-align: center;
+}
+
+:root {
+    --blue: #1790E8;
+    --pink: #F4B9CC;
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --red: #D63B3B;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table,
+td,
+th {
+    border: 1px solid var(--bg-color);
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+a {
+    margin: 0.5rem;
+}
+
+.btn-delete,
+.btn-add,
+.btn-edit,
+.btn-home {
+    text-align: center;
+    display: flex;
+    margin: 0.5rem;
+}
+
+
+.btn-delete {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--red);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--red);
+    font-size: 1rem;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn-add {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--blue);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--blue);
+    font-size: 1rem;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn-edit {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--pink);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--pink);
+    font-size: 1rem;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--second-bg-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: .5s ease;
+}

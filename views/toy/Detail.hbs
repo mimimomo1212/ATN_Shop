@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="logo">ATN</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="/" class="active">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#lego">Lego</a>
+            <a href="/#model">Model</a>
+            <a href="/list">Storage</a>
+        </nav>
+    </header>
+    <section class="detail">
+        <div class="detail-container">
+            <img src="{{ toy.image }}" width="400px" height="576px">
+            <div class="detail-box">
+                <p>Name: {{ toy.name }}</p>
+                <br>
+                <p>Detail: {{ toy.detail }}</p>
+                <br>
+                <p>Price: {{ toy.price }} $</p>
+                <br>
+                <p><a href="#" class="btn">Buy</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
